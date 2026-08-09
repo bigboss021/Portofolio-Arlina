@@ -243,3 +243,55 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 });
+
+// --- TikTok Detail Modal ---
+function openTiktokDetail() {
+  const modal = document.getElementById('tiktokModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+  }
+}
+
+function closeTiktokDetail() {
+  const modal = document.getElementById('tiktokModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// --- Brand Collab Detail Modal ---
+function openCollabDetail() {
+  const modal = document.getElementById('collabModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+  }
+}
+
+function closeCollabDetail() {
+  const modal = document.getElementById('collabModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+// Close any active modal on Escape key
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    closeTiktokDetail();
+    closeCollabDetail();
+  }
+});
+
+// Close modal on overlay click (outside modal content)
+document.addEventListener('click', (e) => {
+  if (e.target.classList.contains('tiktok-modal-overlay')) {
+    closeTiktokDetail();
+    closeCollabDetail();
+  }
+});

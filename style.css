@@ -1411,3 +1411,362 @@ ul { list-style: none; }
     padding: 24px;
   }
 }
+
+/* ============================================
+   TIKTOK DETAIL MODAL
+   ============================================ */
+.tiktok-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(28, 25, 23, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 2000;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 24px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s var(--ease-smooth), visibility 0.4s;
+}
+
+.tiktok-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tiktok-modal {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  max-width: 1000px;
+  width: 100%;
+  padding: 48px;
+  position: relative;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 107, 74, 0.08);
+  transform: translateY(30px) scale(0.97);
+  transition: transform 0.5s var(--ease-spring), opacity 0.4s;
+  opacity: 0;
+}
+
+.tiktok-modal-overlay.active .tiktok-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+.tiktok-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--neutral-100);
+  border: 1px solid var(--neutral-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-base);
+  color: var(--text-secondary);
+  z-index: 10;
+}
+
+.tiktok-modal-close:hover {
+  background: var(--coral-100);
+  border-color: var(--coral-300);
+  color: var(--coral-600);
+  transform: rotate(90deg);
+}
+
+.tiktok-modal-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.tiktok-modal-header h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.highlight-text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tiktok-modal-subtitle {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.tiktok-modal-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.tiktok-detail-card {
+  display: grid;
+  grid-template-columns: auto 280px 1fr;
+  gap: 28px;
+  align-items: start;
+  padding: 32px;
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 107, 74, 0.06);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.tiktok-detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-main);
+  border-radius: 4px 0 0 4px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tiktok-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--coral-200);
+}
+
+.tiktok-detail-card:hover::before {
+  opacity: 1;
+}
+
+.tiktok-detail-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  opacity: 0.25;
+  min-width: 50px;
+  text-align: center;
+  padding-top: 8px;
+}
+
+.tiktok-detail-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-200);
+  transition: var(--transition-base);
+}
+
+.tiktok-detail-card:hover .tiktok-detail-image {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--coral-200);
+}
+
+.tiktok-detail-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.tiktok-detail-card:hover .tiktok-detail-image img {
+  transform: scale(1.02);
+}
+
+.tiktok-detail-info {
+  padding-top: 4px;
+}
+
+.tiktok-detail-info h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.tiktok-detail-info p {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.tiktok-detail-info strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Combined Dual-Image Layout */
+.tiktok-detail-card-combined {
+  grid-template-columns: auto 400px 1fr;
+}
+
+.tiktok-detail-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+.tiktok-detail-images img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--neutral-200);
+  display: block;
+  transition: transform 0.4s var(--ease-smooth);
+}
+
+.tiktok-detail-card:hover .tiktok-detail-images img {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--coral-200);
+}
+
+.detail-bullet-list {
+  list-style: none;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-bullet-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.detail-bullet-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 0;
+  color: var(--coral-500);
+  font-size: 0.75rem;
+  top: 3px;
+}
+
+.tiktok-modal-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--neutral-200);
+}
+
+/* Card Click Hints */
+#tiktokCard,
+#collabCard {
+  position: relative;
+}
+
+#tiktokCard .portfolio-card-overlay,
+#collabCard .portfolio-card-overlay {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.overlay-cta {
+  padding: 6px 16px;
+  background: var(--gradient-main);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: white;
+  animation: pulse-cta 2s ease-in-out infinite;
+}
+
+@keyframes pulse-cta {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ============================================
+   TIKTOK MODAL — RESPONSIVE
+   ============================================ */
+@media (max-width: 900px) {
+  .tiktok-detail-card,
+  .tiktok-detail-card-combined {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+  }
+
+  .tiktok-detail-image,
+  .tiktok-detail-images {
+    grid-column: 1 / -1;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .tiktok-detail-info {
+    grid-column: 1 / -1;
+  }
+
+  .tiktok-detail-number {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 2rem;
+    min-width: auto;
+    z-index: 2;
+  }
+
+  .tiktok-modal {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tiktok-modal-overlay {
+    padding: 16px;
+  }
+
+  .tiktok-modal {
+    padding: 24px 16px;
+    border-radius: var(--radius-lg);
+  }
+
+  .tiktok-modal-header {
+    margin-bottom: 32px;
+  }
+
+  .tiktok-detail-card {
+    padding: 20px 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .tiktok-detail-image {
+    max-width: 260px;
+  }
+
+  .tiktok-modal-grid {
+    gap: 20px;
+  }
+
+  .tiktok-detail-number {
+    font-size: 1.5rem;
+    top: 12px;
+    left: 12px;
+  }
+}
+
