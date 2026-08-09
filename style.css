@@ -1666,6 +1666,11 @@ ul { list-style: none; }
   top: 3px;
 }
 
+/* Certificate Card Layout */
+.tiktok-detail-card-cert {
+  grid-template-columns: auto 320px 1fr;
+}
+
 .tiktok-modal-footer {
   text-align: center;
   margin-top: 40px;
@@ -1675,8 +1680,10 @@ ul { list-style: none; }
 
 /* Card Click Hints */
 #tiktokCard,
-#collabCard {
+#collabCard,
+#certCard {
   position: relative;
+  cursor: pointer;
 }
 
 #tiktokCard .portfolio-card-overlay,

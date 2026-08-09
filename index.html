@@ -279,7 +279,7 @@
           </div>
         </div>
         <!-- Skill 6 -->
-        <div class="skill-card reveal reveal-delay-3">
+        <div class="skill-card reveal reveal-delay-3" id="certCard" onclick="openCertDetail()">
           <div class="skill-icon peach">🛠️</div>
           <h3>Tools & Sertifikasi</h3>
           <p>Menguasai berbagai tools kreatif dan memiliki sertifikasi dari MySkill untuk Social Media Strategy, Content
@@ -289,6 +289,9 @@
             <span class="skill-tag">CapCut</span>
             <span class="skill-tag">Google Workspace</span>
             <span class="skill-tag">MS Office</span>
+          </div>
+          <div style="margin-top: 16px;">
+            <span class="overlay-cta" style="display: inline-block;">Lihat Sertifikat 📜</span>
           </div>
         </div>
       </div>
@@ -709,6 +712,83 @@
 
       <div class="tiktok-modal-footer">
         <button class="btn-primary" onclick="closeCollabDetail()">
+          Tutup Detail
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===== CERTIFICATION DETAIL MODAL ===== -->
+  <div class="tiktok-modal-overlay" id="certModal">
+    <div class="tiktok-modal">
+      <button class="tiktok-modal-close" onclick="closeCertDetail()" aria-label="Tutup modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      
+      <div class="tiktok-modal-header">
+        <div class="section-tag">✦ Sertifikasi Professional</div>
+        <h2>Lisensi & Sertifikasi<br><span class="highlight-text-gradient">MySkill Digital Marketing</span></h2>
+        <p class="tiktok-modal-subtitle">Bukti sertifikasi resmi keahlian di bidang Creative Copywriting, Content Marketing Strategy, dan CRM Marketing dari MySkill.</p>
+      </div>
+
+      <div class="tiktok-modal-grid">
+        <!-- Cert 1: Creative Copywriting Specialization -->
+        <div class="tiktok-detail-card tiktok-detail-card-cert">
+          <div class="tiktok-detail-number">01</div>
+          <div class="tiktok-detail-image">
+            <img src="assets/cert-copywriting.png" alt="Certificate of Skill Specialization Creative Copywriting MySkill" loading="lazy">
+          </div>
+          <div class="tiktok-detail-info">
+            <h3>📜 Skill Specialization — Creative Copywriting</h3>
+            <p><strong>Penerbit & Lisensi:</strong> E-Learning MySkill — Learning Path: Digital Marketing (ID: <code>MS-30/11/2024-TeOjkeWFjRAF38azjfJE</code>)</p>
+            <p style="margin-top: 8px; font-weight: 600; color: var(--text-primary);">Detail Kompetensi & Topik Pelatihan:</p>
+            <ul class="detail-bullet-list">
+              <li><strong>Tanggal Terbit:</strong> 30 November 2024 (Total 12 Jam Pelatihan / 12 Mata Kuliah Terstruktur).</li>
+              <li><strong>Keahlian Utama:</strong> Penyusunan pesan promosi (<em>Copywriting</em>), pembuatan <em>Hook & Headline</em> iklan, formulasi <em>Call-to-Action (CTA)</em>, serta penyusunan <em>Brand Narrative & Storytelling</em>.</li>
+              <li><strong>Akreditasi Internasional:</strong> Diakui oleh <em>Education Alliance Finland</em>, <em>AWS EdStart Member</em>, dan <em>LinkedIn Top Startups Indonesia</em>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cert 2: Content Marketing Strategy -->
+        <div class="tiktok-detail-card tiktok-detail-card-cert">
+          <div class="tiktok-detail-number">02</div>
+          <div class="tiktok-detail-image">
+            <img src="assets/cert-content-strategy.png" alt="MySkill Short Class Content Marketing Strategy" loading="lazy">
+          </div>
+          <div class="tiktok-detail-info">
+            <h3>🎓 Short Class — Content Marketing Strategy</h3>
+            <p><strong>Penerbit & Lisensi:</strong> MySkill Short Class Digital Marketing (ID: <code>189088/DGM/LM/10/2024</code>)</p>
+            <p style="margin-top: 8px; font-weight: 600; color: var(--text-primary);">Detail Kompetensi & Topik Pelatihan:</p>
+            <ul class="detail-bullet-list">
+              <li><strong>Tanggal Terbit:</strong> 2 Oktober 2024.</li>
+              <li><strong>Keahlian Utama:</strong> Merancang strategi <em>content marketing</em> komprehensif, riset tren media sosial, perencanaan <em>content calendar</em>, pemetaan audiens (<em>Buyer Persona</em>), serta pengukuran KPI dan performa konten.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Cert 3: CRM: Email & WhatsApp Marketing -->
+        <div class="tiktok-detail-card tiktok-detail-card-cert">
+          <div class="tiktok-detail-number">03</div>
+          <div class="tiktok-detail-image">
+            <img src="assets/cert-crm.png" alt="MySkill Short Class CRM Email & WhatsApp Marketing" loading="lazy">
+          </div>
+          <div class="tiktok-detail-info">
+            <h3>💬 Short Class — CRM: Email & WhatsApp Marketing</h3>
+            <p><strong>Penerbit & Lisensi:</strong> MySkill Short Class Digital Marketing (ID: <code>164315/DGM/LM/07/2024</code>)</p>
+            <p style="margin-top: 8px; font-weight: 600; color: var(--text-primary);">Detail Kompetensi & Topik Pelatihan:</p>
+            <ul class="detail-bullet-list">
+              <li><strong>Tanggal Terbit:</strong> 11 Juli 2024.</li>
+              <li><strong>Keahlian Utama:</strong> Pengelolaan hubungan pelanggan (<em>Customer Relationship Management</em>), strategi pemasaran via Email dan WhatsApp Broadcast, teknik retensi pelanggan, dan otomasi saluran pemasaran direct-to-consumer.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-modal-footer">
+        <button class="btn-primary" onclick="closeCertDetail()">
           Tutup Detail
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>

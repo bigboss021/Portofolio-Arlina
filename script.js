@@ -280,11 +280,30 @@ function closeCollabDetail() {
   }
 }
 
+// --- Certification Detail Modal ---
+function openCertDetail() {
+  const modal = document.getElementById('certModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+  }
+}
+
+function closeCertDetail() {
+  const modal = document.getElementById('certModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
 // Close any active modal on Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeTiktokDetail();
     closeCollabDetail();
+    closeCertDetail();
   }
 });
 
@@ -293,5 +312,6 @@ document.addEventListener('click', (e) => {
   if (e.target.classList.contains('tiktok-modal-overlay')) {
     closeTiktokDetail();
     closeCollabDetail();
+    closeCertDetail();
   }
 });
