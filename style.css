@@ -1971,12 +1971,14 @@ ul { list-style: none; }
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity 0.4s var(--ease-smooth), visibility 0.4s;
 }
 
 .tiktok-modal-overlay.active {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .tiktok-modal {
