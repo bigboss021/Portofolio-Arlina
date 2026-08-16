@@ -167,31 +167,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- Contact Form ---
+  // --- Contact Form (if present) ---
   const contactForm = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
 
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  if (contactForm && submitBtn) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Mengirim... ⏳';
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.7';
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Mengirim... ⏳';
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
 
-    // Simulate submission
-    setTimeout(() => {
-      submitBtn.textContent = 'Terkirim! ✅';
-      submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
-
+      // Simulate submission
       setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '1';
-        submitBtn.style.background = '';
-        contactForm.reset();
-      }, 2500);
-    }, 1500);
-  });
+        submitBtn.textContent = 'Terkirim! ✅';
+        submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+
+        setTimeout(() => {
+          submitBtn.textContent = originalText;
+          submitBtn.disabled = false;
+          submitBtn.style.opacity = '1';
+          submitBtn.style.background = '';
+          contactForm.reset();
+        }, 2500);
+      }, 1500);
+    });
+  }
 
   // --- Smooth Scroll for Anchor Links ---
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
@@ -323,6 +326,24 @@ function closeCertDetail() {
   }
 }
 
+// --- End-to-End Content Production Modal ---
+function openProdDetail() {
+  const modal = document.getElementById('prodModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+  }
+}
+
+function closeProdDetail() {
+  const modal = document.getElementById('prodModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
 // Close any active modal on Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
@@ -330,6 +351,7 @@ document.addEventListener('keydown', (e) => {
     closeTiktokDetail();
     closeCollabDetail();
     closeCertDetail();
+    closeProdDetail();
   }
 });
 
@@ -340,5 +362,6 @@ document.addEventListener('click', (e) => {
     closeTiktokDetail();
     closeCollabDetail();
     closeCertDetail();
+    closeProdDetail();
   }
 });
