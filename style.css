@@ -2221,6 +2221,7 @@ ul { list-style: none; }
 }
 
 /* Card Click Hints */
+#marketingCard,
 #tiktokCard,
 #collabCard,
 #certCard {
@@ -2228,6 +2229,7 @@ ul { list-style: none; }
   cursor: pointer;
 }
 
+#marketingCard .portfolio-card-overlay,
 #tiktokCard .portfolio-card-overlay,
 #collabCard .portfolio-card-overlay {
   flex-direction: column;

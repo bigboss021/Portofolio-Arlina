@@ -244,6 +244,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+// --- Marketing Creator Detail Modal ---
+function openMarketingDetail() {
+  const modal = document.getElementById('marketingModal');
+  if (modal) {
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    modal.scrollTop = 0;
+  }
+}
+
+function closeMarketingDetail() {
+  const modal = document.getElementById('marketingModal');
+  if (modal) {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
 // --- TikTok Detail Modal ---
 function openTiktokDetail() {
   const modal = document.getElementById('tiktokModal');
@@ -301,6 +319,7 @@ function closeCertDetail() {
 // Close any active modal on Escape key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
+    closeMarketingDetail();
     closeTiktokDetail();
     closeCollabDetail();
     closeCertDetail();
@@ -310,6 +329,7 @@ document.addEventListener('keydown', (e) => {
 // Close modal on overlay click (outside modal content)
 document.addEventListener('click', (e) => {
   if (e.target.classList.contains('tiktok-modal-overlay')) {
+    closeMarketingDetail();
     closeTiktokDetail();
     closeCollabDetail();
     closeCertDetail();

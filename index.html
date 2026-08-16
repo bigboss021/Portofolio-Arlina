@@ -107,11 +107,11 @@
               <div class="float-sub">3.300+ Followers</div>
             </div>
           </div>
-          <div class="hero-float hero-float-2">
+          <div class="hero-float hero-float-2" onclick="openMarketingDetail()" style="cursor: pointer;" title="Klik untuk lihat Rekap Data Talent BA">
             <div class="float-icon pink">📊</div>
             <div>
               <div class="float-text">Marketing Creator</div>
-              <div class="float-sub">Gloglowing Skincare</div>
+              <div class="float-sub">Gloglowing Skincare 👆</div>
             </div>
           </div>
           <div class="hero-float hero-float-3">
@@ -331,7 +331,7 @@
 
       <div class="experience-timeline">
         <!-- Experience 1: Gloglowing Skincare -->
-        <div class="exp-card reveal reveal-delay-1">
+        <div class="exp-card reveal reveal-delay-1" id="expMarketingCard">
           <div class="exp-dot">★</div>
           <div class="exp-header">
             <div class="exp-title-group">
@@ -345,16 +345,27 @@
             <li>Menyusun <strong>200+ creative brief</strong> sesuai strategi campaign dan positioning brand.</li>
             <li>Menghasilkan akumulasi <strong>272,28 M views</strong> dari total <strong>5.003 postingan</strong>
               selama 18 bulan.</li>
+            <li>Konsisten berprestasi di jajaran <strong>TOP 10 Admin Marketing</strong> se-perusahaan selama <strong>5 bulan terakhir</strong>.</li>
             <li>Memberikan arahan konten terarah kepada Brand Ambassador agar sesuai dengan identitas dan guideline
               brand.</li>
             <li>Melakukan evaluasi performa konten berkala berdasarkan metrik engagement, views, dan trend TikTok
               terkini.</li>
           </ul>
           <div class="exp-metrics-row">
+            <span class="exp-metric-tag highlight">🏆 TOP 10 Admin (5 Bulan)</span>
             <span class="exp-metric-tag highlight">🔥 272,28 M Views</span>
             <span class="exp-metric-tag">📋 200+ Creative Brief</span>
             <span class="exp-metric-tag">👥 50+ Brand Ambassador</span>
             <span class="exp-metric-tag">📊 5.003 Postingan</span>
+          </div>
+          <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="btn-primary" onclick="openMarketingDetail()" style="padding: 9px 20px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; border: none;">
+              <span>📊 Lihat Rekap Data Talent BA</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="marketing-creator.html" target="_blank" class="btn-secondary" style="padding: 9px 18px; font-size: 0.88rem; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+              <span>Buka di Tab Baru ↗️</span>
+            </a>
           </div>
         </div>
 
@@ -501,11 +512,13 @@
 
       <div class="portfolio-grid">
         <!-- Project 1: Gloglowing Skincare -->
-        <div class="portfolio-card reveal reveal-delay-1" data-category="marketing">
+        <div class="portfolio-card reveal reveal-delay-1" data-category="marketing" id="marketingCard"
+          onclick="openMarketingDetail()">
           <div class="portfolio-card-image">
             <img src="assets/project-marketing.png" alt="Marketing Creator — Gloglowing Skincare">
             <div class="portfolio-card-overlay">
               <span class="overlay-tag">Marketing Creator</span>
+              <span class="overlay-cta">Klik untuk detail 👆</span>
             </div>
           </div>
           <div class="portfolio-card-info">
@@ -700,6 +713,540 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== MARKETING CREATOR DETAIL MODAL ===== -->
+  <div class="tiktok-modal-overlay" id="marketingModal">
+    <div class="tiktok-modal">
+      <button class="tiktok-modal-close" onclick="closeMarketingDetail()" aria-label="Tutup modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6L6 18M6 6l12 12" />
+        </svg>
+      </button>
+
+      <div class="tiktok-modal-header">
+        <div class="section-tag">✦ Marketing Creator Executive Report</div>
+        <h2>Rekapitulasi Data Talent BA &<br><span class="highlight-text-gradient">Laporan Statistik Views Bulanan</span></h2>
+        <p class="tiktok-modal-subtitle">
+          Dokumentasi komprehensif sistem manajemen <strong>Brand Ambassador (BA)</strong> Gloglowing Skincare oleh <strong>Arlina Faradisa</strong> di bawah supervisi <strong>Leader Yusi</strong>. Terbagi menjadi 2 grup laporan:
+        </p>
+        <div style="margin-top: 16px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
+          <a href="marketing-creator.html" target="_blank" class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 8px; padding: 9px 22px; font-size: 0.88rem; text-decoration: none;">
+            <span>Buka Halaman Lengkap di Tab Baru ↗️</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ==========================================
+           GRUP 01: DATABASE TALENT BRAND AMBASSADOR
+           ========================================== -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; border: 1px solid rgba(255, 107, 74, 0.15); box-shadow: var(--shadow-sm); margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; border-bottom: 1px dashed var(--neutral-200); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; background: var(--coral-50); color: var(--coral-600); padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">
+              📂 Grup 01: Database Talent BA
+            </span>
+            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-top: 6px;">Rekapitulasi Data Talent (Brand Ambassador)</h3>
+          </div>
+          <span style="font-size: 0.8rem; background: var(--neutral-100); color: var(--text-secondary); padding: 4px 10px; border-radius: var(--radius-full); font-weight: 600;">
+            Sheet: ELISA • ARLINA • ALIA • AGNI • BELIA
+          </span>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+          Merekap semua data 72 Brand Ambassador mulai dari data pribadi, kontrak kerja sama, link postingan, perpanjangan kontrak, produk yang didapat, hingga pengajuan payment.
+        </p>
+
+        <!-- Quick KPI Chips Grup 1 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Talent</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">72 Talent</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">In Progress</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">39 Talent</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Finish Kontrak</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #16a34a;">26 Talent</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Pindah Admin</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">7 Talent</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Talent Barter</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">2 Talent</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Rata-rata / VT</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">Rp102.201</div>
+          </div>
+        </div>
+
+        <!-- Spreadsheet Screenshot Foto 1 -->
+        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <img src="assets/marketing-creator-rekap.jpg" alt="Rekap Data Spreadsheet Talent BA Admin Arlina Leader Yusi" style="width: 100%; display: block;" loading="lazy">
+        </div>
+
+        <!-- 6 Pillars Cards Grup 1 -->
+        <div class="tiktok-modal-grid">
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">01</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>👤 Data Pribadi Talent (Brand Ambassador)</h3>
+              <p>Pencatatan ID unik sistem (GG 611, GG 612, GG 607, dll.), username TikTok resmi (@imaazhr, @najaa, dll.), nomor kontak WhatsApp, domisili, dan segmentasi kategori konten.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">02</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📜 Data Kontrak Kerja Sama</h3>
+              <p>Klasifikasi kemitraan (TIKTOK KONTRAK & Barter), tanggal awal & akhir kontrak, kuota deliverables video (120 VT / 360 VT), dan supervisi Leader Yusi.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">03</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🔗 Data Link Postingan BA & Monitoring</h3>
+              <p>Pengarsipan direct link postingan TikTok, tautan master Google Docs monitoring per talent, review kesesuaian brief, dan verifikasi keranjang kuning.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">04</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🔄 Data Perpanjangan Kontrak (Renewal)</h3>
+              <p>Monitoring status (In Progress 39, Finish 26, Pindah Admin 7), add-on kuota (5 VT tambahan), evaluasi views & konversi, serta perpanjangan kontrak performa unggul.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">05</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📦 Data Produk yang Didapat oleh BA</h3>
+              <p>Pendataan pengiriman paket produk Gloglowing Skincare & Bodycare, tracking nomor resi ekspedisi, alokasi sample review, dan restock rutin.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">06</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>💰 Data Pengajuan Payment BA</h3>
+              <p>Kalkulasi fee tuntas (rata-rata Rp102.201 / VT), validasi link postingan, pengajuan invoice dan approval ke Leader Yusi & Finance, serta rekonsiliasi arsip transfer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           GRUP 02: REKAPITULASI LAPORAN VIEWS, BRIEF & REWARD BA
+           ========================================================= -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; border: 1px solid rgba(37, 99, 235, 0.18); box-shadow: var(--shadow-sm); margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; border-bottom: 1px dashed var(--neutral-200); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; background: #eff6ff; color: #2563eb; padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">
+              📊 Grup 02: Laporan Views, Brief & Reward
+            </span>
+            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-top: 6px;">Statistik Bulanan Lengkap (16 Periode • 272M+ Views)</h3>
+          </div>
+          <span style="font-size: 0.8rem; background: #dcfce7; color: #15803d; padding: 4px 10px; border-radius: var(--radius-full); font-weight: 600;">
+            Periode: 2025-04 s.d. 2026-07
+          </span>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+          Merekap laporan views setiap 10 hari, total views dari 200+ brief yang dibuat, harga per postingan BA, serta sistem reward apresiasi bagi BA berkinerja tinggi (masuk ke data laporan resmi).
+        </p>
+
+        <!-- Quick KPI Chips Grup 2 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Posting</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">5.003</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Views</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">272,28 M</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Peak Views/Post</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #16a34a;">80.405</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Biaya</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">Rp694,4 M</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Biaya / 1K (CPM)</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">Rp1.416</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Creative Brief</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">200+ Brief</div>
+          </div>
+        </div>
+
+        <!-- Statistik Screenshot Foto 2 -->
+        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <img src="assets/marketing-creator-statistik.jpg" alt="Statistik Bulanan Lengkap Views dan Biaya Posting BA" style="width: 100%; display: block;" loading="lazy">
+        </div>
+
+        <!-- 4 Laporan Cards Grup 2 -->
+        <div class="tiktok-modal-grid">
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">01</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>⏱️ Rekap Laporan Views Setiap 10 Hari</h3>
+              <p>Monitoring laju views per 10 hari (periode harian/dekade bulanan) untuk mendeteksi konten berpotensi FYP, mengukur retensi penonton, dan evaluasi cepat untuk penyesuaian strategi hook video.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">02</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📋 Total Views dari Brief yang Dibuat</h3>
+              <p>Akumulasi total <strong>272,28 Juta Views</strong> dari <strong>200+ Creative Brief</strong> dan <strong>5.003 postingan</strong>, dengan puncak capaian bulanan 25,25 Juta views dan 80.405 views/post.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">03</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>💵 Harga Per Postingan BA & Biaya/1K (CPM)</h3>
+              <p>Pencatatan harga rata-rata Rp102.201 per postingan BA serta analisis biaya per 1.000 views yang sangat efisien (turun drastis hingga <strong>Rp1.416 / 1K views</strong>).</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">04</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🏆 Reward & Insentif yang Diberikan kepada BA</h3>
+              <p>Skema bonus video viral FYP (100K+ views), reward Top Performer bulanan, dan insentif ketepatan waktu posting yang dicatat resmi ke dalam data laporan pengeluaran payment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           GRUP 03: TREN PERTUMBUHAN & EFISIENSI (GRAFIK 272M+ VIEWS)
+           ========================================================= -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; border: 1px solid rgba(147, 51, 234, 0.2); box-shadow: var(--shadow-sm); margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; border-bottom: 1px dashed var(--neutral-200); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; background: #faf5ff; color: #9333ea; padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">
+              📈 Grup 03: Tren Pertumbuhan & Efisiensi
+            </span>
+            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-top: 6px;">Lebih Sedikit Posting, Hasil Jauh Lebih Besar (272,28 M Views)</h3>
+          </div>
+          <span style="font-size: 0.8rem; background: #fdf2f8; color: #db2777; padding: 4px 10px; border-radius: var(--radius-full); font-weight: 600;">
+            Akumulasi 18 Bulan • 5.003 Postingan
+          </span>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+          Grafik visualisasi performa kampanye digital: Menghasilkan <strong>272,28 M views</strong> dengan <strong>5.003 postingan</strong> dalam jangka waktu 18 bulan, dengan rata-rata tertimbang 54.423 views/post dan puncak 80.405 views/post.
+        </p>
+
+        <!-- Quick KPI Chips Grup 3 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Postingan</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">5.003</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Views</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">272,28 Jt</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Nilai Biaya</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">Rp692,15 Jt</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Views / Post</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #9333ea;">54.423</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Bulan Terbaik</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #16a34a;">Apr 2026</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Efisiensi Biaya</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">Rp1.416</div>
+          </div>
+        </div>
+
+        <!-- Grafik Screenshot Foto 3 -->
+        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <img src="assets/marketing-creator-grafik.jpg" alt="Grafik Tren Views Lebih Sedikit Posting Hasil Jauh Lebih Besar" style="width: 100%; display: block;" loading="lazy">
+        </div>
+
+        <!-- 3 Strategy Cards Grup 3 -->
+        <div class="tiktok-modal-grid">
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">01</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🚀 Strategi "Lebih Sedikit Posting, Hasil Lebih Besar"</h3>
+              <p>Fokus pada penyusunan creative brief yang berkualitas tinggi dan relevan dengan tren, sehingga meskipun volume postingan bulanan menurun, rata-rata tayangan per video melonjak 2x lipat hingga <strong>80.405 views/post</strong>.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">02</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>👑 Rekor Puncak Performa (April 2026)</h3>
+              <p>Mencatatkan rekor tertinggi sepanjang kampanye sebesar <strong>25,25 Juta Views</strong> hanya dari 314 postingan terpilih, didorong formula konten momentum festive yang tepat sasaran.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">03</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>💰 Efisiensi Anggaran Maksimal (Rp1.416 / 1K Views)</h3>
+              <p>Pengelolaan anggaran yang sangat terukur dengan efisiensi biaya promosi terbaik <strong>Rp1.416 per 1.000 views</strong>, menghasilkan return of marketing exposure yang luar biasa dari total nilai biaya Rp692,15 Juta.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           GRUP 04: ANALISIS LAPORAN BULANAN & PRODUKTIVITAS KONTEN
+           ========================================================= -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; border: 1px solid rgba(219, 39, 119, 0.2); box-shadow: var(--shadow-sm); margin-bottom: 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; border-bottom: 1px dashed var(--neutral-200); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; background: #fdf2f8; color: #db2777; padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">
+              🔬 Grup 04: Analisis Laporan Setiap Bulan
+            </span>
+            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-top: 6px;">Produktivitas Konten: Kualitas Distribusi Mengalahkan Kuantitas (+66,0%)</h3>
+          </div>
+          <span style="font-size: 0.8rem; background: #f0fdf4; color: #16a34a; padding: 4px 10px; border-radius: var(--radius-full); font-weight: 600;">
+            Pertumbuhan Views/Post: +66,0%
+          </span>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+          Analisis evaluasi laporan performa setiap bulan: Menunjukkan lonjakan tajam <em>views per posting</em> (+66,0%) dari rata-rata 43.299 views/post (2025) menjadi <strong>71.868 views/post (2026)</strong>, terutama setelah restrukturisasi strategi sejak November 2025.
+        </p>
+
+        <!-- Quick KPI Chips Grup 4 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Rata-rata 2025</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text-primary);">43.299</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Rata-rata 2026</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #db2777;">71.868</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Peningkatan</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #16a34a;">+66,0%</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Titik Balik</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">Nov 2025</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Peak Views/Post</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #9333ea;">80.405</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Efisiensi Volume</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">-40% Post</div>
+          </div>
+        </div>
+
+        <!-- Analisis Screenshot Foto 4 -->
+        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <img src="assets/marketing-creator-analisis-bulanan.jpg" alt="Produktivitas Konten Kualitas Distribusi Mengalahkan Kuantitas" style="width: 100%; display: block;" loading="lazy">
+        </div>
+
+        <!-- 3 Analysis Cards Grup 4 -->
+        <div class="tiktok-modal-grid">
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">01</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📊 Kenaikan Rata-rata Views/Post (+66,0%)</h3>
+              <p>Perbandingan komprehensif antara tahun 2025 (rata-rata <strong>43.299 views/post</strong>) dan tahun 2026 (rata-rata <strong>71.868 views/post</strong>), membuktikan lonjakan kualitas distribusi konten sebesar <strong>+66,0%</strong> secara stabil.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">02</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>⚡ Titik Balik Strategis (November 2025)</h3>
+              <p>Grafik menunjukkan garis views/post yang meroket tajam tepat sejak November 2025, hasil dari perombakan struktur hook 3 detik awal, riset tren audio viral, dan penyempurnaan creative brief.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">03</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📈 Evaluasi Bulanan untuk Keputusan Strategis</h3>
+              <p>Data analisis bulanan menjadi dasar objektif dalam menyusun laporan ke pimpinan brand, menetapkan alokasi anggaran bulan berikutnya, serta mengevaluasi perpanjangan kontrak tiering Brand Ambassador.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =========================================================
+           GRUP 05: SHOWCASE 9 DARI 50+ AKUN BA YANG DI-HANDEL
+           ========================================================= -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; border: 1px solid rgba(5, 150, 105, 0.2); box-shadow: var(--shadow-sm); margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; border-bottom: 1px dashed var(--neutral-200); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; background: #ecfdf5; color: #059669; padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">
+              📱 Grup 05: Showcase Akun BA
+            </span>
+            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-top: 6px;">9 dari 50+ Akun BA yang Dikelola Aktif</h3>
+          </div>
+          <span style="font-size: 0.8rem; background: #d1fae5; color: #065f46; padding: 4px 10px; border-radius: var(--radius-full); font-weight: 600;">
+            50+ Brand Ambassador Aktif
+          </span>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+          Cuplikan feeds TikTok dari <strong>9 Brand Ambassador pilihan</strong> di antara <strong>50+ akun BA</strong> yang dikelola langsung oleh Arlina Faradisa. Menunjukkan variasi niche, konsistensi produksi, dan pencapaian video FYP viral hingga jutaan views.
+        </p>
+
+        <!-- Quick KPI Chips Grup 5 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total BA Dikelola</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #059669;">50+ BA</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Sample Showcase</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">9 Akun</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Peak Views / Video</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">1,2 Jt+</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Variasi Niche</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #9333ea;">Multi-Niche</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Rata-rata Views</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #db2777;">Ratusan Rb</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Keranjang Kuning</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #16a34a;">Aktif</div>
+          </div>
+        </div>
+
+        <!-- 9 Akun Screenshot Foto 5 -->
+        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <img src="assets/marketing-creator-9-akun-ba.jpg" alt="Showcase 9 dari 50+ Akun Brand Ambassador yang Dikelola" style="width: 100%; display: block;" loading="lazy">
+        </div>
+
+        <!-- 3 Pillars Grup 5 -->
+        <div class="tiktok-modal-grid">
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">01</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🎭 Segmentasi & Persona Talent yang Beragam</h3>
+              <p>Mengarahkan beragam persona Brand Ambassador untuk mencakup seluruh demografi audiens: Hijab style, Beauty daily routine, Teen & Youth, Comedy/Couple storytelling, hingga Bodycare review.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">02</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🔥 Konsistensi FYP & Jutaan Views Organik</h3>
+              <p>Setiap akun secara rutin memproduksi video FYP dengan capaian ratusan ribu hingga jutaan views (seperti rekor 1,2 Juta Views, 845,7K, 763,5K, 610,7K, 356,4K views) dengan engagement interaktif yang tinggi.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">03</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📝 Quality Control Naskah & Hubungan Talent yang Kuat</h3>
+              <p>Standardisasi kualitas visual dan naskah sebelum tayang, pendampingan komunikasi harian via WhatsApp, pemenuhan kebutuhan sample produk, serta optimalisasi penyematan keranjang kuning.</p>
+            </div>
+          </div>
+        </div>
+      <!-- =========================================================
+           GRUP 06: PRESTASI & PENGHARGAAN TOP 10 ADMIN MARKETING
+           ========================================================= -->
+      <div style="background: var(--bg-card); border-radius: var(--radius-xl); padding: 28px; border: 1px solid rgba(217, 119, 6, 0.25); box-shadow: var(--shadow-sm); margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; border-bottom: 1px dashed var(--neutral-200); padding-bottom: 12px;">
+          <div>
+            <span style="font-size: 0.8rem; background: #fffbeb; color: #d97706; padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; text-transform: uppercase;">
+              🏆 Grup 06: Prestasi & Rekognisi Kinerja
+            </span>
+            <h3 style="font-size: 1.3rem; color: var(--text-primary); margin-top: 6px;">Konsisten Masuk TOP 10 Admin Marketing Selama 5 Bulan Terakhir</h3>
+          </div>
+          <span style="font-size: 0.8rem; background: #fef3c7; color: #b45309; padding: 4px 10px; border-radius: var(--radius-full); font-weight: 700;">
+            ⭐ 5 Bulan Berturut-turut
+          </span>
+        </div>
+        <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
+          Pengakuan resmi performa berprestasi: <strong>Arlina Faradisa</strong> berhasil mempertahankan posisi prestisius dalam <strong>TOP 10 Admin Marketing</strong> Gloglowing Skincare secara konsisten selama <strong>5 bulan terakhir berturut-turut</strong> dari puluhan admin marketing se-perusahaan.
+        </p>
+
+        <!-- Quick KPI Chips Grup 6 -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin-bottom: 20px;">
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Pencapaian</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #d97706;">TOP 10</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Durasi Rekor</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">5 Bulan</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Leaderboard</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #2563eb;">TOP 15</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Peringkat Utama</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #16a34a;">Rank 6 / Top</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Supervisi</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: #9333ea;">Leader Yusi</div>
+          </div>
+          <div style="background: var(--bg-primary); padding: 12px 10px; border-radius: var(--radius-md); border: 1px solid var(--neutral-200); text-align: center;">
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total Kontribusi</div>
+            <div style="font-family: 'Space Grotesk', sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--coral-600);">272,28 M</div>
+          </div>
+        </div>
+
+        <!-- Top 10 Screenshot Foto 6 -->
+        <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--neutral-200); margin-bottom: 24px; box-shadow: var(--shadow-sm);">
+          <img src="assets/marketing-creator-top10-achievement.jpg" alt="Top 15 Admin Marketing Rekor Top 10 Selama 5 Bulan Terakhir Arlina Faradisa" style="width: 100%; display: block;" loading="lazy">
+        </div>
+
+        <!-- 3 Key Pillars Grup 6 -->
+        <div class="tiktok-modal-grid">
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">01</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>🏅 Konsistensi Output & Target Deliverables</h3>
+              <p>Mempertahankan ritme kerja stabil selama 5 bulan berturut-turut di papan atas leaderboard, memastikan zero pending deliverables kuota VT, dan rekonsiliasi database talent tanpa cacat audit.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">02</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>📈 Tingginya Akumulasi Views & Dampak Kampanye</h3>
+              <p>Menjadi salah satu kontributor terbesar dengan akumulasi total 272,28 Juta Views, kenaikan produktivitas views/post +66%, dan optimalisasi biaya campaign termurah hingga Rp1.416 / 1K views.</p>
+            </div>
+          </div>
+          <div class="tiktok-detail-card">
+            <div class="tiktok-detail-number">03</div>
+            <div class="tiktok-detail-info" style="grid-column: 2 / -1;">
+              <h3>👑 Kepemimpinan & Hubungan Talent yang Solid</h3>
+              <p>Menjaga retensi dan kepuasan 50+ Brand Ambassador melalui komunikasi persuasif, responsif menyelesaikan kendala, serta kolaborasi harmonis bersama Leader Yusi dan manajemen brand.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-modal-footer" style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <button class="btn-primary" onclick="closeMarketingDetail()">
+          Tutup Detail
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <a href="marketing-creator.html" target="_blank" class="btn-secondary"
+          style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; padding: 12px 24px; border-radius: var(--radius-full);">
+          <span>Buka di Tab Baru ↗️</span>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== TIKTOK DETAIL MODAL ===== -->
   <div class="tiktok-modal-overlay" id="tiktokModal">
